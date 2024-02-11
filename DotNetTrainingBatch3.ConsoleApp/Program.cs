@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using DotNetTrainingBatch3.ConsoleApp.AdoDotNetExamples;
+using System.Data;
 using System.Data.SqlClient;
 
 Console.WriteLine("Hello, World!");
@@ -38,23 +40,50 @@ Console.WriteLine("Hello, World!");
 
 // We will start to learn how to communiate DA and SQL 
 
-SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder();
-sqlConnectionStringBuilder.DataSource = @"DESKTOP-O796GIE\SQLEXPRESS";
-sqlConnectionStringBuilder.InitialCatalog = "TestDb1";
-sqlConnectionStringBuilder.UserID = "sa";
-sqlConnectionStringBuilder.Password = "qqq12";
+// SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder();
+// sqlConnectionStringBuilder.DataSource = @"DESKTOP-O796GIE\SQLEXPRESS";
+// sqlConnectionStringBuilder.InitialCatalog = "TestDb1";
+// sqlConnectionStringBuilder.UserID = "sa";
+// sqlConnectionStringBuilder.Password = "qqq12";
 
-Console.WriteLine("Connection: " + sqlConnectionStringBuilder.ConnectionString);
+// Console.WriteLine("Connection: " + sqlConnectionStringBuilder.ConnectionString);
 
-SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
-Console.WriteLine("Connection Opening........");
-connection.Open();
-Console.WriteLine("Connection Opend!");
+// SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+// Console.WriteLine("Connection Opening........");
+// connection.Open();
+// Console.WriteLine("Connection Opend!");
 
-Console.WriteLine("Connection Closing......");
-connection.Close();
-Console.WriteLine("Connection Closed!");
+// data set => can store more than one table
+// data table
+// data row
+// data column
 
+// string query = @"SELECT [BlogId]
+//       ,[BlogTitle]
+//       ,[BlogAuthor]
+//       ,[BlogContent]
+//   FROM [dbo].[Table_1]";
+// SqlCommand cmd = new SqlCommand(query, connection); //add to the command
+// SqlDataAdapter adapter = new SqlDataAdapter(cmd); 
+// DataTable dt = new DataTable();
+// adapter.Fill(dt);
 
+// Console.WriteLine("Connection Closing......");
+// connection.Close();
+// Console.WriteLine("Connection Closed!");
 
+// foreach (DataRow dr in dt.Rows)
+// {
+//     Console.WriteLine("Title..." + dr["BlogTitle"]);
+//     Console.WriteLine("Author..." + dr["BlogAuthor"]);
+//     Console.WriteLine("Content.." + dr["BlogContent"]);
+// }
+
+AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+// adoDotNetExample.Read();
+// adoDotNetExample.Edit(id: 2);
+// adoDotNetExample.Edit(id: 91);
+// adoDotNetExample.Create("test title", "test author", "test content");
+// adoDotNetExample.Update(id: 1002, title: "test title 2", author: "test author 2", content: "test content 2");
+adoDotNetExample.Delete(2);
 Console.ReadKey();

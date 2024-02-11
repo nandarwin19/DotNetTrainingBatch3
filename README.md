@@ -1,5 +1,9 @@
 # DotNetTrainingBatch3
 
+ado.net
+dapper
+ef core
+
 C#
 
 .net framework
