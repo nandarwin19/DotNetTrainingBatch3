@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using DotNetTrainingBatch3.ConsoleApp.AdoDotNetExamples;
+using DotNetTrainingBatch3.ConsoleApp.DapperExamples;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -79,11 +80,21 @@ Console.WriteLine("Hello, World!");
 //     Console.WriteLine("Content.." + dr["BlogContent"]);
 // }
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+// AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 // adoDotNetExample.Read();
 // adoDotNetExample.Edit(id: 2);
 // adoDotNetExample.Edit(id: 91);
 // adoDotNetExample.Create("test title", "test author", "test content");
 // adoDotNetExample.Update(id: 1002, title: "test title 2", author: "test author 2", content: "test content 2");
-adoDotNetExample.Delete(2);
+// adoDotNetExample.Delete(2);
+
+DapperExample dapperExample = new DapperExample();
+// dapperExample.Read();
+
+// dapperExample.Edit(id: 2);
+// dapperExample.Edit(id: 91);
+
+//dapperExample.Create("test title", "test author", "test content");
+// dapperExample.Update(id: 11, title: "test title 3", author: "test author 3", content: "test content 3");
+dapperExample.Delete(4);
 Console.ReadKey();
