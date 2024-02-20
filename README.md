@@ -37,3 +37,20 @@ C#
 - asp.net web forms
 - asp.net core web mvc [x]
 - asp.net core web api [x]
+
+
+## ef core
+
+https://localhost:3000/api/blog
+
+http method
+httpget - read
+httpget - edit/1
+httppost - create
+httpput  - update
+httpdelete - delete
+
+
+http status code
+
+404 - not found

@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetTrainingBatch3.ConsoleApp.Models
+namespace DotNetTrainingBatch3.WebApi.Models
 {
     [Table("Table_1")]
     public class BlogModel
     {
         [Key]
-       
+        [Column("BlogId")]
         public int BlogId { get; set; }
 
         public string BlogTitle { get; set; }

@@ -2,6 +2,7 @@
 
 using DotNetTrainingBatch3.ConsoleApp.AdoDotNetExamples;
 using DotNetTrainingBatch3.ConsoleApp.DapperExamples;
+using DotNetTrainingBatch3.ConsoleApp.EfCoreExamples;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -88,7 +89,7 @@ Console.WriteLine("Hello, World!");
 // adoDotNetExample.Update(id: 1002, title: "test title 2", author: "test author 2", content: "test content 2");
 // adoDotNetExample.Delete(2);
 
-DapperExample dapperExample = new DapperExample();
+// DapperExample dapperExample = new DapperExample();
 // dapperExample.Read();
 
 // dapperExample.Edit(id: 2);
@@ -96,5 +97,14 @@ DapperExample dapperExample = new DapperExample();
 
 //dapperExample.Create("test title", "test author", "test content");
 // dapperExample.Update(id: 11, title: "test title 3", author: "test author 3", content: "test content 3");
-dapperExample.Delete(4);
+
+EfCoreExample efCoreExample = new EfCoreExample();
+efCoreExample.Read();
+
+// efCoreExample.Edit(id: 3);
+// efCoreExample.Edit(11);
+// efCoreExample.Create("test title", "test author", "test content");
+// efCoreExample.Update(14, "test title 2", "test author 2", "test");
+efCoreExample.Delete(14);
+
 Console.ReadKey();
