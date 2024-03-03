@@ -6,6 +6,8 @@ using DotNetTrainingBatch3.ConsoleApp.EfCoreExamples;
 using DotNetTrainingBatch3.ConsoleApp.HttpClientExamples;
 using System.Data;
 using System.Data.SqlClient;
+using Newtonsoft.Json;
+using DotNetTrainingBatch3.ConsoleApp.Models;
 
 Console.WriteLine("Hello, World!");
 
@@ -108,6 +110,31 @@ Console.WriteLine("Hello, World!");
 // efCoreExample.Update(14, "test title 2", "test author 2", "test");
 // efCoreExample.Delete(14);
 
+// HttpClientExample httpClientExample = new HttpClientExample();
+// await httpClientExample.Run();
+
+// BlogModel blog = new BlogModel();
+// blog.BlogTitle = "Test";
+// blog.BlogAuthor = "Test";
+// blog.BlogContent = "Test";
+
+// string json = JsonConvert.SerializeObject(blog); // C# object to Json
+// Console.WriteLine(blog);
+// Console.WriteLine(json);
+// Console.WriteLine(blog.BlogTitle);
+// Console.WriteLine(blog.BlogAuthor);
+// Console.WriteLine(blog.BlogContent);
+
+
+//bBlogModel blog2 = JsonConvert.DeserializeObject<BlogModel>(json)!;
+// Console.WriteLine(blog2.BlogTitle);
+// Console.WriteLine(blog2.BlogAuthor);
+// Console.WriteLine(blog2.BlogContent);
+Console.WriteLine("Waiting for api...");
+Console.ReadKey();
+
 HttpClientExample httpClientExample = new HttpClientExample();
-await httpClientExample.Run();
+ await httpClientExample.Run();
+
+
 Console.ReadKey();
