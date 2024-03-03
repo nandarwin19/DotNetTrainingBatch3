@@ -3,6 +3,7 @@
 using DotNetTrainingBatch3.ConsoleApp.AdoDotNetExamples;
 using DotNetTrainingBatch3.ConsoleApp.DapperExamples;
 using DotNetTrainingBatch3.ConsoleApp.EfCoreExamples;
+using DotNetTrainingBatch3.ConsoleApp.HttpClientExamples;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -98,13 +99,15 @@ Console.WriteLine("Hello, World!");
 //dapperExample.Create("test title", "test author", "test content");
 // dapperExample.Update(id: 11, title: "test title 3", author: "test author 3", content: "test content 3");
 
-EfCoreExample efCoreExample = new EfCoreExample();
-efCoreExample.Read();
+// EfCoreExample efCoreExample = new EfCoreExample();
+// efCoreExample.Read();
 
 // efCoreExample.Edit(id: 3);
 // efCoreExample.Edit(11);
 // efCoreExample.Create("test title", "test author", "test content");
 // efCoreExample.Update(14, "test title 2", "test author 2", "test");
-efCoreExample.Delete(14);
+// efCoreExample.Delete(14);
 
+HttpClientExample httpClientExample = new HttpClientExample();
+await httpClientExample.Run();
 Console.ReadKey();
